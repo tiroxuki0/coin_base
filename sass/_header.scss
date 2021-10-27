@@ -1,0 +1,228 @@
+.header {
+  width: 100%;
+  height: auto;
+  padding: 37px 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 68px;
+    margin-right: 60px;
+    &-item {
+    }
+    &-link {
+      font-size: 14px;
+      line-height: calc(21 / 14);
+      font-weight: 700;
+      color: rgba(51, 51, 51, 1);
+      position: relative;
+    }
+    &-link:hover:before {
+      opacity: 1;
+      visibility: visible;
+    }
+    &-link::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 150%);
+      width: 3rem;
+      height: 0.5rem;
+      background: #e068a1;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s linear;
+      border-radius: 1rem;
+    }
+  }
+  &-right {
+    display: flex;
+    align-items: center;
+    gap: 51px;
+    .bar-wrapper {
+      display: flex;
+      align-items: center;
+      .fa-bars {
+        font-size: 2rem;
+        display: none;
+      }
+    }
+    .sell {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      position: relative;
+      &-menu.active {
+        transform: translate(75%, 100%);
+        opacity: 1;
+        visibility: visible;
+        bottom: -100%;
+      }
+      &-menu {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border: 2px solid rgba(128, 128, 128, 0.2);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        max-width: 20rem;
+        transform: translate(75%, 100%);
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        background-color: rgba(255, 255, 255, 0.267);
+        backdrop-filter: blur(1rem);
+        transition: all 0.4s ease;
+        z-index: 100;
+        &-item {
+          width: 100%;
+          transition: all 0.2s ease;
+          border-radius: 3px;
+        }
+        &-link {
+          width: 100%;
+          display: block;
+          padding: 1rem;
+          border-radius: 4px;
+          transition: all 0.5s ease;
+          position: relative;
+        }
+
+        &-item.active {
+          background-image: linear-gradient(to top, #3e23c3, #e068a1);
+          transition: all 0.2s linear;
+          a {
+            color: white;
+            transition: all 0.2s linear;
+          }
+          a:before {
+            background-color: #e068a1;
+          }
+        }
+      }
+      .fa-triangle {
+        font-size: 0.8rem;
+        transition: all 0.2s ease;
+      }
+      .fa-triangle.active {
+        transform: rotate(180deg) translateY(-30%);
+      }
+      #sell,
+      a {
+        font-size: 14px;
+        line-height: calc(21 / 14);
+        font-weight: 700;
+        color: rgba(51, 51, 51, 1);
+      }
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .header {
+    padding: 25px 30px;
+
+    &-right {
+      gap: 15px;
+      .header-menu {
+        margin-right: 20px;
+        gap: 35px;
+      }
+      .sell {
+      }
+      .button {
+        width: 130px;
+        height: 40px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 880px) {
+  .header {
+    padding: 25px 30px;
+
+    &-right {
+      position: relative;
+      .bar-wrapper.active {
+        .sell,
+        .header-menu {
+          transition: all 0.5s ease;
+          animation: scale 0.5s ease forwards;
+        }
+      }
+      @keyframes scale {
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .bar-wrapper {
+        position: absolute;
+        top: -65%;
+        right: 110%;
+        width: 20rem;
+        min-width: 15rem;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 2rem;
+        z-index: 1000;
+        .fa-bars {
+          display: inline-block;
+          transition: all 0.5s ease;
+          font-size: 3rem;
+          margin-top: 22%;
+        }
+        .fa-times {
+          margin-top: 18%;
+          transform: rotate(360deg);
+          transition: all 0.5s ease;
+        }
+        gap: 15px;
+        .header-menu {
+          width: 100%;
+          margin-right: 0;
+          gap: 2rem;
+          display: flex;
+          flex-direction: column;
+          opacity: 0;
+          transform: scale(0);
+        }
+
+        .sell {
+          display: inline-block;
+          width: 100%;
+          text-align: center;
+          opacity: 0;
+          transform: scale(0);
+          .sell-menu.active {
+            transform: translate(80%, 100%);
+          }
+        }
+        .button {
+          width: 130px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .header {
+    &-right {
+      .bar-wrapper {
+        .fa-bars {
+          font-size: 3rem;
+          margin-top: 22%;
+        }
+      }
+    }
+  }
+}

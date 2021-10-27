@@ -1,0 +1,48 @@
+body {
+  overflow-x: hidden;
+}
+
+.button {
+  @include buttonGradient;
+  text-transform: uppercase;
+  position: relative;
+  transition: all 0.2s linear;
+}
+.button:hover {
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+.buttonWhite {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.button-wrapper {
+  width: 157px;
+  height: 54px;
+  border-radius: 100rem;
+  background-color: white;
+}
+
+.title {
+  @include textGradient;
+  font-size: 28px;
+  font-weight: 700;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 1rem;
+    background-color: $pink;
+    border-radius: 2rem;
+    bottom: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 1023px) {
+  html {
+    font-size: 50%;
+  }
+}

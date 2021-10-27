@@ -1,0 +1,77 @@
+.testimonials {
+  height: 120rem;
+  margin-top: 20rem;
+  background-image: $gradient;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+  gap: 73px;
+  padding-top: 30rem;
+  img {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+  .slogan {
+    width: 350px;
+    font-size: 28px;
+    line-height: calc(42 / 28);
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 2;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 1rem;
+      border-radius: 2rem;
+      background-color: $pink;
+      bottom: -28px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  span {
+    font-size: 16px;
+    line-height: calc(40 / 16);
+    text-align: center;
+    width: 550px;
+    color: white;
+    position: relative;
+    z-index: 2;
+  }
+  .image1 {
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+  }
+  .image2 {
+    left: 50%;
+    bottom: 20%;
+    transform: translateY(-25%);
+  }
+  .image3 {
+    bottom: 10%;
+    right: 10%;
+  }
+  .image4 {
+    top: 30%;
+    left: 10%;
+  }
+  .wave-top {
+    top: 0;
+    width: 100%;
+    transform: translateY(-15%) rotate(180deg);
+  }
+  .wave-bottom {
+    width: 100%;
+    bottom: 0;
+    transform: translateY(15%);
+    z-index: 6;
+  }
+}

@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+$pink: #e068a1;
+$headerSize: 190%;
+$textSize: 150%;
+
+$gradient: linear-gradient(to top, #3e23c3, #e068a1);
+
+$spacing: 180px;
+
+@mixin textGradient {
+  font-size: 28px;
+  background: linear-gradient(to top, #3e23c3, #e068a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin buttonGradient {
+  width: 157px;
+  height: 54px;
+  border-radius: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to top, #3e23c3, #e068a1);
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+}

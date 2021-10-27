@@ -1,0 +1,55 @@
+.download {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+  z-index: 5;
+  height: 800px;
+  background-image: linear-gradient(#d362a4, #793cb7);
+  background-position: top;
+  .title-wrapper {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 37px;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+    .store {
+      position: relative;
+      z-index: 2;
+    }
+    .wave {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      transform: rotate(180deg) translateY(-70%);
+    }
+  }
+  span {
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+    line-height: calc(40 / 16);
+    width: 378px;
+    text-align: center;
+  }
+
+  .x1 {
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    z-index: 3;
+    transform: translate(-105%, 40%);
+  }
+  .x2 {
+    left: 50%;
+    bottom: 0;
+    transform: translateY(40%);
+    position: absolute;
+    z-index: 3;
+  }
+}
