@@ -1,0 +1,62 @@
+.about_coin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 41px;
+  .title {
+    max-width: 512px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: calc(40 / 18);
+    text-align: center;
+  }
+  .ceo {
+    font-size: 14px;
+    text-align: center;
+  }
+  .main {
+    width: 100%;
+    max-width: 1048px;
+    height: auto;
+    padding: 5rem;
+    background: $gradient;
+    border-radius: 3rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 43px;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 99.5%;
+      height: 99.5%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: inherit;
+      background-color: white;
+      z-index: 1;
+    }
+    .main-image,
+    span,
+    .icon,
+    .title {
+      position: relative;
+      z-index: 2;
+    }
+    .title {
+    }
+    span {
+      font-size: 16px;
+      line-height: calc(40 / 16);
+      font-weight: 400;
+      max-width: 542px;
+      text-align: center;
+    }
+    .icon {
+    }
+  }
+}

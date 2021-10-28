@@ -40,6 +40,30 @@ document.querySelector(".fa-bars").addEventListener("click", function(){
     document.querySelector(".sell-menu").classList.remove("active")
 })
 
+/* location to about page */
+document.querySelector(".header .header-right .header-menu .header-menu-item a[href^='#about']").addEventListener("click", function(){
+    window.location = "./about_page/about.html"
+})
 
+document.querySelector(".header .header-right .header-menu .header-menu-item a[href^='#home']").addEventListener("click", function(){
+    window.location = "../index.html"
+})
 
+/* login form start */
+document.querySelector("#login").onclick = () =>{
+    document.querySelector(".login-wrapper").classList.add("active")
+}
 
+document.querySelector(".login-wrapper").onclick = (e) =>{
+    let wrapper = document.querySelector(".login-wrapper")
+    if(e.target == wrapper){
+        document.querySelector(".login-wrapper").classList.remove("active")
+    }
+}
+
+window.onkeydown = (e) => {
+    if(e.keyCode == 27){
+        document.querySelector(".login-wrapper").classList.remove("active")
+    }
+}
+/* login form end */
