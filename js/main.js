@@ -67,3 +67,9 @@ window.onkeydown = (e) => {
     }
 }
 /* login form end */
+
+window.onscroll = () =>{
+    document.querySelector(".fa-bars").classList.remove("fa-times")
+    document.querySelector(".bar-wrapper").classList.remove("active")
+    document.querySelector(".sell-menu").classList.remove("active")
+}
