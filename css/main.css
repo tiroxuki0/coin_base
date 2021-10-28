@@ -1426,7 +1426,7 @@ body {
   margin-top: -17px;
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 25px;
   gap: 18px;
 }
 .footer .links {
@@ -1493,6 +1493,11 @@ body {
   }
   .footer .instagram .images {
     --f-columns: 6;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer {
+    padding: 70px 10px;
   }
 }
 
