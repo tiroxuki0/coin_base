@@ -293,7 +293,7 @@ body {
     display: inline-block;
     transition: all 0.5s ease;
     font-size: 3rem;
-    margin-top: 15%;
+    margin-top: 17%;
   }
   .header-right .bar-wrapper .fa-times {
     margin-top: 18%;
@@ -327,7 +327,7 @@ body {
 @media screen and (max-width: 767px) {
   .header-right .bar-wrapper .fa-bars {
     font-size: 3rem;
-    margin-top: 15%;
+    margin-top: 17%;
   }
 }
 @media screen and (max-width: 374px) {
@@ -413,7 +413,12 @@ body {
   transform: translateY(20%);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+  .home {
+    padding: 120px 20px;
+  }
+}
+@media screen and (max-width: 850px) {
   .home {
     padding: 50px 50px 150px 50px;
     display: flex;
@@ -426,11 +431,6 @@ body {
   }
   .home .home-image {
     transform: translate(0, 0);
-  }
-}
-@media screen and (max-width: 1023px) {
-  .home {
-    padding: 120px 20px;
   }
 }
 @media screen and (max-width: 374px) {
@@ -485,6 +485,7 @@ body {
 .experience-content .title:before {
   left: 0;
   transform: translateX(5%);
+  bottom: 0%;
 }
 .welcome-content p,
 .experience-content p {
@@ -740,7 +741,7 @@ body {
 
 @media screen and (max-width: 1023px) {
   .rates {
-    padding: 0 50px;
+    padding: 0 20px;
   }
   .rates .table {
     grid-gap: 0rem 5rem;
@@ -824,7 +825,7 @@ body {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -10%;
+  bottom: 0%;
   width: 50px;
   height: 1rem;
   border-radius: 2rem;
@@ -1103,7 +1104,7 @@ body {
   .our-blog .content .content-card:last-child {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 55%) scale(0.8);
+    transform: translate(-50%, 60%) scale(0.8);
   }
 }
 @media screen and (max-width: 475px) {
@@ -1165,7 +1166,7 @@ body {
   transform: translate(-50%, -50%);
 }
 .testimonials .image2 {
-  left: 50%;
+  left: 20%;
   bottom: 20%;
   transform: translateY(-25%);
 }
@@ -1201,6 +1202,22 @@ body {
     bottom: 25%;
     flex-shrink: 1;
     transform: scale(0.5);
+  }
+}
+@media screen and (max-width: 450px) {
+  .testimonials {
+    min-height: 65rem;
+    padding-top: 12rem;
+  }
+  .testimonials .image2 {
+    left: 7%;
+    bottom: 15%;
+    flex-shrink: 1;
+    transform: scale(0.7);
+  }
+  .testimonials .image3 {
+    bottom: 5%;
+    right: -5%;
   }
 }
 .download {
@@ -1308,7 +1325,7 @@ body {
 .subscribe span {
   font-size: 16px;
   line-height: 2.5;
-  width: 378px;
+  max-width: 378px;
   text-align: center;
 }
 .subscribe .form {

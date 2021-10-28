@@ -52,7 +52,7 @@
     transform: translate(-50%, -50%);
   }
   .image2 {
-    left: 50%;
+    left: 20%;
     bottom: 20%;
     transform: translateY(-25%);
   }
@@ -87,6 +87,22 @@
       bottom: 25%;
       flex-shrink: 1;
       transform: scale(0.5);
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .testimonials {
+    min-height: 65rem;
+    padding-top: 12rem;
+    .image2 {
+      left: 7%;
+      bottom: 15%;
+      flex-shrink: 1;
+      transform: scale(0.7);
+    }
+    .image3 {
+      bottom: 5%;
+      right: -5%;
     }
   }
 }
