@@ -7,8 +7,9 @@
   justify-content: center;
   align-items: center;
   .inner-trading {
-    width: 980px;
-    height: 500px;
+    max-width: 980px;
+    min-height: 500px;
+    padding: 1rem 10rem;
     background-color: white;
     border-radius: 30px;
     box-shadow: rgb(127 127 127 / 25%) 0px 8px 24px 11px;
@@ -20,6 +21,9 @@
     align-items: center;
     flex-direction: column;
     gap: 80px;
+    .title {
+      text-align: center;
+    }
     .two-card {
       display: flex;
       justify-content: center;
@@ -49,8 +53,8 @@
       .gift::before {
         content: "";
         position: absolute;
-        width: 260px;
-        height: 224px;
+        width: 99%;
+        height: 99%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -71,6 +75,29 @@
     z-index: 1;
     img {
       width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .trading {
+    .inner-trading {
+      gap: 30px;
+      .two-card {
+        gap: 5px;
+        padding: 5rem 0rem;
+        flex-direction: column;
+      }
+    }
+  }
+}
+@media screen and (max-width: 540px) {
+  .trading {
+    .inner-trading {
+      padding: 5rem 0rem;
+      gap: 30px;
+      .two-card {
+        flex-direction: column;
+      }
     }
   }
 }

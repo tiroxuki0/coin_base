@@ -1,5 +1,5 @@
 .testimonials {
-  height: 120rem;
+  min-height: 120rem;
   margin-top: 20rem;
   background-image: $gradient;
   width: 100%;
@@ -10,13 +10,14 @@
   position: relative;
   gap: 73px;
   padding-top: 30rem;
+
   img {
     position: absolute;
     bottom: 0;
     z-index: 1;
   }
   .slogan {
-    width: 350px;
+    max-width: 350px;
     font-size: 28px;
     line-height: calc(42 / 28);
     font-weight: 700;
@@ -27,7 +28,7 @@
     &:before {
       content: "";
       position: absolute;
-      width: 60px;
+      max-width: 60px;
       height: 1rem;
       border-radius: 2rem;
       background-color: $pink;
@@ -37,10 +38,10 @@
     }
   }
   span {
+    max-width: 550px;
     font-size: 16px;
     line-height: calc(40 / 16);
     text-align: center;
-    width: 550px;
     color: white;
     position: relative;
     z-index: 2;
@@ -73,5 +74,19 @@
     bottom: 0;
     transform: translateY(15%);
     z-index: 6;
+  }
+}
+@media screen and (max-width: 767px) {
+  .testimonials {
+    min-height: 85rem;
+    margin-top: 25rem;
+    padding-top: 20rem;
+    gap: 20px;
+    .image2 {
+      left: 22%;
+      bottom: 25%;
+      flex-shrink: 1;
+      transform: scale(0.5);
+    }
   }
 }

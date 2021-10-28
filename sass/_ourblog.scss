@@ -1,7 +1,8 @@
 .our-blog {
-  padding: 30rem $spacing $spacing $spacing;
+  padding: 25rem $spacing 0rem $spacing;
+  min-height: 80rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   gap: 67px;
@@ -9,8 +10,11 @@
     display: block;
     font-size: 15px;
     font-weight: 400;
+    text-align: center;
   }
   .content {
+    height: 100%;
+    width: 100%;
     position: relative;
     display: flex;
     justify-content: center;
@@ -18,13 +22,12 @@
     gap: 1rem;
     position: relative;
     .content-card {
-      width: 465px;
-      height: 358px;
+      max-width: 465px;
+      min-height: 358px;
       display: flex;
       align-items: flex-start;
       justify-content: center;
       flex-direction: column;
-
       background-image: linear-gradient(
         rgba(136, 136, 136, 1),
         rgba(136, 136, 136, 1)
@@ -69,8 +72,8 @@
         position: absolute;
         background-color: white;
         border-radius: 15px;
-        width: 99.5%;
-        height: 99.5%;
+        width: 99%;
+        height: 99%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -117,5 +120,46 @@
         );
       }
     }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .our-blog {
+    .content {
+      .content-card {
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .our-blog {
+    padding: 35rem 0rem 0rem 0rem;
+    gap: 40px;
+
+    .content {
+      .content-card {
+        width: 100%;
+        &:first-child {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -15%) scale(0.8);
+        }
+        &:nth-child(2) {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, 20%);
+        }
+        &:last-child {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, 55%) scale(0.8);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 475px) {
+  .our-blog {
+    padding: 40rem 0rem;
   }
 }

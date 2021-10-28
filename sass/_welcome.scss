@@ -8,8 +8,8 @@
   position: relative;
   z-index: 2;
   &-image {
-    width: 629px;
-    height: 393px;
+    max-width: 629px;
+    max-height: 393px;
 
     img {
       width: 100%;
@@ -17,7 +17,7 @@
     }
   }
   &-content {
-    width: 542px;
+    max-width: 542px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -50,6 +50,18 @@
     flex-direction: column;
     &-content {
       gap: 10px;
+    }
+  }
+}
+@media screen and (max-width: 359px) {
+  .welcome {
+    &-content {
+      .title {
+        line-height: 1;
+        &:before {
+          bottom: -15%;
+        }
+      }
     }
   }
 }

@@ -173,6 +173,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 2rem;
         .button {
           width: 85px;
           height: 24px;
@@ -244,12 +245,12 @@
 @media screen and (max-width: 767px) {
   .rates {
     .wave-top {
-      top: -2%;
+      top: -1.5%;
     }
     .wave-bottom {
-      bottom: -2%;
+      bottom: -1.5%;
     }
-    min-height: 125rem;
+    min-height: 113rem;
     .table {
       grid-template-columns: 1fr;
       grid-gap: 2rem;
@@ -257,7 +258,6 @@
       .innerRates {
         gap: 1rem;
         .bitcoin {
-          gap: 5rem;
           .right {
             gap: 1rem;
           }
@@ -272,6 +272,16 @@
           }
         }
       }
+    }
+  }
+}
+@media screen and (max-width: 374px) {
+  .rates {
+    .wave-top {
+      top: -1%;
+    }
+    .wave-bottom {
+      bottom: -1%;
     }
   }
 }

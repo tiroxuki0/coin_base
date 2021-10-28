@@ -7,6 +7,7 @@
   justify-content: flex-end;
   flex-direction: column;
   padding-bottom: 10rem;
+  text-align: center;
   span {
     font-size: 16px;
     line-height: calc(40 / 16);
@@ -42,5 +43,31 @@
 @media screen and (max-width: 1023px) {
   .subscribe {
     height: 85rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .subscribe {
+    height: 80rem;
+    gap: 40px;
+    .form {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+@media screen and (max-width: 451px) {
+  .subscribe {
+    height: 70rem;
+  }
+}
+@media screen and (max-width: 374px) {
+  .subscribe {
+    height: 75rem;
+    .form {
+      .input-wrapper {
+        width: 300px;
+      }
+    }
   }
 }
