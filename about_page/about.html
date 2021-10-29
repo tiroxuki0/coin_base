@@ -21,15 +21,39 @@
             <h2 class="title">Welcome back!</h2>
             <span>Kindly fill in your login details to proceed</span>
             <form action="">
-              <input type="email" class="email" placeholder="Email">
-              <input type="password" class="password" placeholder="Password">
+              <input type="email" class="email" placeholder="Email" id="login-email">
+              <input type="password" class="password" placeholder="Password" id="login-password">
               <p>i forgot my password?</p>
               <button class="button">login</button>
-              <p>Don’t have an account yet? <span>Sign Up</span></p>
+              <p id="to-signup">Don’t have an account yet? <span>Sign Up</span></p>
             </form>
+            <i class="fas fa-times" id="close-login"></i>
           </div>
         </div>
         <!-- login form end -->
+      
+        <!-- signup form start -->
+          <div class="signup-wrapper">
+            <div class="signup">
+              <h2 class="title">Sign up</h2>
+              <span>There’s no charge upon registration</span>
+              <form action="">
+
+                <input type="text" class="email" placeholder="Email" id="full-name">
+                
+                <input type="email" class="email" placeholder="Email" id="email">
+
+                <input type="password" class="password" placeholder="Password" id="password">
+
+                <input type="password" class="password" placeholder="Confirm password" id="confirm-password">
+
+                <button class="button">sign up</button>
+                <p id="to-login">Already a member?<span>Login</span></p>
+              </form>
+              <i class="fas fa-times" id="close-signup"></i>
+            </div>
+          </div>
+          <!-- signup form end -->
 
             <header class="header">
                 <div class="logo">
@@ -42,7 +66,7 @@
                           <a href="#home" class="header-menu-link">Home</a>
                         </li>
                           <li class="header-menu-item active">
-                            <a href="#about" class="header-menu-link">About us</a>
+                            <a href="" class="header-menu-link">About us</a>
                           </li>
                           <li class="header-menu-item">
                             <a href="#blog" class="header-menu-link">Blog</a>
@@ -278,7 +302,7 @@
       </div>
 
     <!-- js custom file links -->
-    <script src="../js/main.js"></script>
+    <script src="./js/about.js"></script>
 </body>
 </html>
 
