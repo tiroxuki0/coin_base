@@ -1,6 +1,10 @@
 
+/* location to another page */
 document.querySelector(".header .header-right .header-menu .header-menu-item a[href^='#home']").addEventListener("click", function(){
     window.location = "../index.html"
+})
+document.querySelector(".header .header-right .header-menu .header-menu-item a[href^='#blog']").addEventListener("click", function(){
+    window.location = "../blog/blog.html"
 })
 
 

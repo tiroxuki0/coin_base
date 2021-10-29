@@ -1,3 +1,11 @@
+/* location to another page */
+
+document.querySelector(".header .header-right .header-menu .header-menu-item a[href^='#about']").addEventListener("click", function(){
+    window.location = "./about_page/about.html"
+})
+document.querySelector(".header .header-right .header-menu .header-menu-item a[href^='#blog']").addEventListener("click", function(){
+    window.location = "./blog/blog.html"
+})
 
 let sell =document.querySelectorAll(".sell-menu-item")
 sell.forEach(function(element,index) {
@@ -40,11 +48,6 @@ document.querySelector(".fa-bars").addEventListener("click", function(){
     document.querySelector(".sell-menu").classList.remove("active")
 })
 
-/* location to about page */
-
-document.querySelector(".header .header-right .header-menu .header-menu-item a[href^='#about']").addEventListener("click", function(){
-    window.location = "./about_page/about.html"
-})
 
 
 /* login form start */

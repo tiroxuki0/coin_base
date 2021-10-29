@@ -5,6 +5,7 @@ body {
 .wrapper {
   width: 100vw;
   height: auto;
+  overflow-y: hidden;
 }
 .button {
   @include buttonGradient;
