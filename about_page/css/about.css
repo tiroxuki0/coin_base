@@ -761,21 +761,29 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+  .meet_team {
+    height: 670px;
+  }
+  .meet_team .main {
+    margin-top: 9rem;
+  }
   .meet_team .main .card {
     display: none;
   }
   .meet_team .main .card.active {
-    display: block;
+    display: flex;
   }
   .meet_team .main .card:nth-child(3) {
-    display: block;
-    height: 75%;
-    transform: translate(-20%, -50%);
+    display: flex;
+    width: 70%;
+    height: 100%;
+    transform: translate(0, -75%);
   }
   .meet_team .main .card:nth-child(4) {
-    display: block;
-    height: 75%;
-    transform: translate(20%, -50%);
+    display: flex;
+    width: 70%;
+    height: 100%;
+    transform: translate(0, -25%);
   }
 }
 .subscribe {

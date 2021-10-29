@@ -85,21 +85,25 @@
 }
 @media screen and (max-width: 767px) {
   .meet_team {
+    height: 670px;
     .main {
+      margin-top: 9rem;
       .card {
         display: none;
         &.active {
-          display: block;
+          display: flex;
         }
         &:nth-child(3) {
-          display: block;
-          height: 75%;
-          transform: translate(-20%, -50%);
+          display: flex;
+          width: 70%;
+          height: 100%;
+          transform: translate(0, -75%);
         }
         &:nth-child(4) {
-          display: block;
-          height: 75%;
-          transform: translate(20%, -50%);
+          display: flex;
+          width: 70%;
+          height: 100%;
+          transform: translate(0, -25%);
         }
       }
     }
