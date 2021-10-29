@@ -1,0 +1,162 @@
+@import "../../sass/variables";
+@import "../../sass/reset";
+@import "../../sass/header";
+@import "../../about_page/sass/home";
+@import "../../sass/footer";
+@import "../../sass/global";
+
+.blog-wrapper {
+  padding-bottom: 5rem;
+  position: relative;
+  .nativigaion-list {
+    max-width: 380px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    .item {
+      width: 6rem;
+      height: 6rem;
+      border-radius: 100rem;
+      background-color: white;
+      color: black;
+      border: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      &.active {
+        background-image: $gradient;
+        color: white;
+      }
+    }
+    .nav1 {
+    }
+    .nav2 {
+    }
+    .nav3 {
+    }
+    .more {
+    }
+  }
+  .next {
+    width: 10rem;
+    height: 6rem;
+    border-radius: 100rem;
+    background-color: white;
+    color: black;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+  }
+}
+.blog1 {
+  background-image: url("../imgs/friends-exchanging-gift-boxes-with-one-another_53876-43036-edit.png");
+}
+.blog2 {
+  background-image: url("../imgs/merry-christmas-card-with-golden-black-presents_1361-1777-edit.png");
+}
+.blog3 {
+  background-image: url("../imgs/401\ 1.png");
+}
+.blog1,
+.blog2,
+.blog3 {
+  width: 100%;
+  max-width: 1170px;
+  height: 873px;
+  border-radius: 10px;
+  position: relative;
+  background-position: center bottom;
+  background-size: cover;
+  margin: 10rem auto;
+  .inner-blog {
+    position: absolute;
+    width: 100%;
+    min-height: 300px;
+    padding: 1rem 0rem;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: $gradient;
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+    gap: 30px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 99.5%;
+      height: 99%;
+      border-radius: inherit;
+      background-color: white;
+      z-index: 1;
+    }
+    .title,
+    .date,
+    .text,
+    .button {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      &::before {
+        display: none;
+      }
+    }
+    .title {
+      font-size: 32px;
+    }
+    .date {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 220px;
+      gap: 21px;
+      position: relative;
+      span {
+        font-weight: 400;
+        font-size: 15px;
+        text-transform: uppercase;
+      }
+      .line {
+        display: block;
+        height: 15px;
+        width: 1px;
+        background-color: black;
+      }
+    }
+    .text {
+      width: 100%;
+      max-width: 870px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: calc(28 / 16);
+    }
+    .button {
+    }
+  }
+}
+@media screen and (max-width: 420px) {
+  .blog-wrapper {
+    .nativigaion-list {
+      .list {
+        .nav3 {
+          display: none;
+        }
+      }
+    }
+  }
+}
