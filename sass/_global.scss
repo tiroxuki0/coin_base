@@ -47,7 +47,8 @@ body {
   }
 }
 
-.login-wrapper {
+.login-wrapper,
+.signup-wrapper {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -64,7 +65,9 @@ body {
     visibility: visible; //
     opacity: 1; //
   }
-  .login {
+
+  .login,
+  .signup {
     width: 100%;
     max-width: 644px;
     height: 583px;
@@ -76,14 +79,23 @@ body {
     border-radius: 30px;
     gap: 21px;
     position: absolute;
+    .fa-times {
+      position: absolute;
+      font-size: 3rem;
+      right: 2rem;
+      top: 1rem;
+      cursor: pointer;
+    }
     .title {
       font-size: 24px;
       font-weight: 700;
+      text-transform: none;
       &::before {
         background-color: transparent;
       }
     }
     span {
+      text-transform: none;
       font-size: 16px;
       font-weight: 400;
       line-height: calc(25 / 16);
@@ -126,5 +138,8 @@ body {
       .button {
       }
     }
+  }
+  .signup {
+    height: 95vh;
   }
 }
