@@ -1456,7 +1456,8 @@ body {
     height: 75rem;
   }
   .subscribe .form .input-wrapper {
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
   }
 }
 .footer {

@@ -838,7 +838,8 @@ body {
 }
 @media screen and (max-width: 374px) {
   .subscribe .form .input-wrapper {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
   }
 }
 .footer {
